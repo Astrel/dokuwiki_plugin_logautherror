@@ -9,7 +9,7 @@ HOW TO INSTALL
 
 1. Unzip it if isn't 
 2. Just copy this folder (logAuthError) in {dokuwikiroot}/lib/plugins/
-3. It work !
+3. It works !
 
 **WARNING**: You can config the error message in the admin panel but by default match for fail2ban
 
