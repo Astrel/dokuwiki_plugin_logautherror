@@ -3,4 +3,4 @@
  * Default options for the logAuthError Plugin
  */
 
-$conf['errorMsg'] = 'ERROR AUTH: "{userName}" with pass: "{userPass}"';
+$conf['errorMsg'] = 'user {userName}: authentication failure';
