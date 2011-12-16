@@ -6,8 +6,6 @@ Is usefull with [fail2ban](https://github.com/fail2ban/fail2ban "Fail2Ban scans 
 
 **WARNING**: You can config the error message in the admin panel but by default match for fail2ban
 
-graphviz Plugin for DokuWiki
-
 All documentation for this plugin can be found at
 http://www.dokuwiki.org/plugin:logautherror
 
@@ -19,7 +17,7 @@ Please refer to http://www.dokuwiki.org/plugins for additional info
 on how to install plugins in DokuWiki.
 
 ----
-Copyright (C) Andreas Gohr <andi@splitbrain.org>
+Copyright (C) ASTREL <devel@astrel.fr>
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
