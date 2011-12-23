@@ -41,6 +41,7 @@ class action_plugin_logautherror extends DokuWiki_Action_Plugin {
     function _logAuthError(&$event, $param){
         if($event->result === false && !empty($event->data['user'])){
             error_log(str_replace(array('{userName}','{userPass}'), array($event->data['user'], $event->data['password']), $this->getConf('errorMsg')),0);
+            sleep(mt_rand(1,15));
         }
     }
 }
