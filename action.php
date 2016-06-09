@@ -29,7 +29,7 @@ class action_plugin_logautherror extends DokuWiki_Action_Plugin {
      * Plugin should use this method to register its handlers with the dokuwiki's event controller
      * @see DokuWiki_Action_Plugin::register()
      */
-    function register(&$controller) {
+    function register(Doku_Event_Handler $controller) {
         $controller->register_hook('AUTH_LOGIN_CHECK', 'AFTER', $this, '_logAuthError');
     }
     
@@ -38,7 +38,7 @@ class action_plugin_logautherror extends DokuWiki_Action_Plugin {
      * @param DOKU_EVENT $event
      * @param array $param
      */
-    function _logAuthError(&$event, $param){
+    function _logAuthError(Doku_Event $event, $param){
         if($event->result === false && !empty($event->data['user'])){
             error_log(str_replace(array('{userName}','{userPass}'), array($event->data['user'], $event->data['password']), $this->getConf('errorMsg')),0);
             sleep(mt_rand(1,15));
